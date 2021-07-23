@@ -12,7 +12,7 @@ def canUnlockAll(boxes):
     total_boxes = len(boxes)
     lista_boxes = list(range(1, total_boxes))
 
-    if total_boxes == 0:
+    if not boxes or total_boxes == 0:
         return False
     
     keys_list = boxes[0]
