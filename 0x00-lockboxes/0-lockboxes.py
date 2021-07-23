@@ -10,7 +10,7 @@ def canUnlockAll(boxes):
     """Method that determines if all the boxes can be opened"""
 
     total_boxes = len(boxes)
-    lista_boxes = list(range(0, total_boxes))
+    lista_boxes = list(range(1, total_boxes))
     keys_list = boxes[0]
     
     if total_boxes <= 1:
