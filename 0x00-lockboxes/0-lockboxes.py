@@ -11,6 +11,10 @@ def canUnlockAll(boxes):
 
     total_boxes = len(boxes)
     lista_boxes = list(range(1, total_boxes))
+
+    if total_boxes == 0:
+        return False
+    
     keys_list = boxes[0]
     
     if total_boxes <= 1:
@@ -19,16 +23,14 @@ def canUnlockAll(boxes):
     for key in keys_list:
         if key in lista_boxes:
             for key_box in boxes[key]:
-                if key_box not in keys_list:
+                if key_box not in keys_list and key_box != 0:
                     keys_list.append(key_box)
     
     keys_list.sort()
-
     if keys_list == lista_boxes:
         return True
     else:
         return False
 
-boxes = [[1, 4, 6], [2], [0, 4, 1], [5, 6, 2], [3], [4, 1], [6]]
-print(canUnlockAll(boxes))
+
 
