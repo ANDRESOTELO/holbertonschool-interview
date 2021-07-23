@@ -19,6 +19,8 @@ def canUnlockAll(boxes):
         return True
 
     keys_list = boxes[0]
+    if 0 in keys_list:
+        del keys_list[0]
     for key in keys_list:
         if key in lista_boxes:
             for key_box in boxes[key]:
