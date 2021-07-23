@@ -14,12 +14,11 @@ def canUnlockAll(boxes):
 
     if not boxes or total_boxes == 0:
         return False
-    
-    keys_list = boxes[0]
-    
+
     if total_boxes <= 1:
         return True
     
+    keys_list = boxes[0]
     for key in keys_list:
         if key in lista_boxes:
             for key_box in boxes[key]:
