@@ -3,6 +3,7 @@
 
 #include <stddef.h>
 
+
 /**
  * struct binary_tree_s - Binary tree node
  *
@@ -22,6 +23,7 @@ typedef struct binary_tree_s
 /*Max binary heap*/
 typedef struct binary_tree_s heap_t;
 
+/*Print function*/
 void binary_tree_print(const binary_tree_t *);
 
 /*New Node*/
