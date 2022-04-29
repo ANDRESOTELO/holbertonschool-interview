@@ -18,18 +18,18 @@ listint_t *insert_node(listint_t **head, int number)
 	{
 		return (NULL);
 	}
+	current_node = *head;
 	new_node = malloc(sizeof(listint_t));
 	if (new_node == NULL)
 	{
 		return (NULL);
 	}
-	current_node = *head;
 	new_node->n = number;
 	if (current_node)
 	{
 		if (current_node->n > number)
 		{
-			new_node->next = prev_node;
+			new_node->next = current_node;
 			*head = new_node;
 			return (new_node);
 		}
