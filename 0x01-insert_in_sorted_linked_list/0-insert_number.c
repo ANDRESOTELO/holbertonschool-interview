@@ -11,49 +11,50 @@
 listint_t *insert_node(listint_t **head, int number)
 {
 	listint_t *new_node = NULL;
-    listint_t *prev_node = NULL;
-    listint_t *next_node = NULL;
+    listint_t *current_node = NULL;
+
+    /* If head doesn´t exists */
+    if (!head)
+        return (NULL);
 
     /* Allocate memory to new node */
 	new_node = malloc(sizeof(listint_t));
 
     /* Check if new node allocate memory success */
-	if (new_node)
-    {
-        /* Assign number to the variable in the new node */
-        new_node->n = number;
+	if (!new_node)
+		return (NULL);
 
-        if (head)
+    /* Assign head to current node */
+    current_node = *head;
+
+    /* Assign number to the variable in the new node */
+	new_node->n = number;
+
+	if (current_node)
+	{
+        if (current_node->n > number)
         {
-            /* Assign head to the previous node */
-            prev_node = *head;
-
-            if (!prev_node)
-            {
-                new_node->next_node = prev_node;
-                *head = new_node;
-                return (new_node);
-            }
-
-            next_node = prev_node->next_node;
-            if (prev_node->n > number)
-            {
-                new_node->next_node = prev_node;
-                *head = new_node;
-                return (new_node);
-            }
-            while (next_node && next_node->n < number)
-            {
-                prev_node = prev_node->next_node;
-                next_node = next_node->next_node;
-            }
-            prev_node->next_node = new_node;
-            new->next_node = next_node;
+            new_node->next = prev_node;
+			*head = new_node;
+			return (new_node);
         }
+
+        while (current_node->next)
+        {
+            if (current_node->next->n > number)
+            {
+                new_node->next = current_node->next;
+                current_node->next = new_node;
+                return (new_node);
+            }
+            current_node = current_node->next;
+        }
+
+        new_node->next = NULL;
+        current_node->next = new_node;
         return (new_node);
     }
-    else
-    {
-        return (NULL);
-    }
+    new_node->next = NULL;
+    *head = new_node;
+    return (new_node);
 }
