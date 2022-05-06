@@ -35,5 +35,6 @@ void swapFuntion(heap_t **node);
 
 /* Heap Insert */
 heap_t *heap_insert(heap_t **root, int value);
+heap_t *test(heap_t **root);
 
 #endif /* _BINARY_TREES_H_ */

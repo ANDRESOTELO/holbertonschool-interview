@@ -26,6 +26,46 @@ void swapFuntion(heap_t **node)
 
 
 /**
+ * test - Find parent node.
+ * @root: root
+ * Return: Node to parent.
+ */
+
+heap_t *test(heap_t **root)
+{
+	heap_t *node = NULL;
+	heap_t *array[100];
+	int front = 0;
+	int reer = 0;
+
+
+	array[reer] = *root;
+	while (2021)
+	{
+		node = array[front];
+		front++;
+		if (!node->left)
+		{
+			front = reer = 0;
+			return (node);
+		}
+		else if (!node->right)
+		{
+			front = reer = 0;
+			return (node);
+		}
+		else
+		{
+			reer = reer + 1;
+			array[reer] = node->left;
+			reer = reer + 1;
+			array[reer] = node->right;
+		}
+	}
+}
+
+
+/**
  * heap_insert - Inserts a value into a Max Binary Heap
  *
  * @root: Double pointer to the root node of the Heap
