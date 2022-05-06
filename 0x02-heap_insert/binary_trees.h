@@ -33,4 +33,8 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
 /* Heap Insert */
 heap_t *heap_insert(heap_t **root, int value);
 
+/* Swap Function */
+void swapFuntion(heap_t **node);
+
+
 #endif /* _BINARY_TREES_H_ */
