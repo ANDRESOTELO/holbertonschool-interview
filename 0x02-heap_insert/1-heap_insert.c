@@ -84,7 +84,7 @@ heap_t *heap_insert(heap_t **root, int value)
 		*root = binary_tree_node(*root, value);
 		return (*root);
 	}
-	parent = testx(root);
+	parent = test(root);
 	new = binary_tree_node(parent, value);
 	if (!parent->left)
 		parent->left = new;
