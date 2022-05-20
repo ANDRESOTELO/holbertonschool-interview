@@ -22,7 +22,7 @@ static void print_grid(int grid[3][3])
 }
 
 /**
- * copy_grip - copy a grid
+ * copy - copy a grid
  * @grid_result: Left grid
  * @grid_sum: Right grid
  *
@@ -37,7 +37,7 @@ void copy(int grid_result[3][3], int grid_sum[3][3])
 }
 
 /**
- * toppling_round - Toopling
+ * toppling - Toopling
  * @grid1: 3x3 grid
  *
  */
@@ -47,7 +47,7 @@ void toppling(int grid1[3][3])
 	int stable = 1;
 	int grid_copy[3][3];
 
-	copy_grip(grid_copy, grid1);
+	copy(grid_copy, grid1);
 	for (i = 0; i < 3; i++)
 	{
 		for (j = 0; j < 3; j++)
@@ -70,7 +70,7 @@ void toppling(int grid1[3][3])
 	{
 		printf("=\n");
 		print_grid(grid1);
-		toppling_round(grid1);
+		toppling(grid1);
 	}
 }
 /**
@@ -96,6 +96,6 @@ void sandpiles_sum(int grid1[3][3], int grid2[3][3])
 	{
 		printf("=\n");
 		print_grid(grid1);
-		toppling_round(grid1);
+		toppling(grid1);
 	}
 }
