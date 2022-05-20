@@ -5,7 +5,7 @@
 #include <stdio.h>
 
 
-void sandpiles(int grid1[3][3], int grid2[3][3]);
+void sandpiles_sum(int grid1[3][3], int grid2[3][3]);
 
 void copy(int grid_result[3][3], int grid_sum[3][3]);
 

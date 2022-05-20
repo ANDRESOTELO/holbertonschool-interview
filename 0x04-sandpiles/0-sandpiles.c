@@ -79,7 +79,7 @@ void toppling(int grid1[3][3])
  * @grid2: Right grid
  *
  */
-void sandpiles(int grid1[3][3], int grid2[3][3])
+void sandpiles_sum(int grid1[3][3], int grid2[3][3])
 {
 	int i = 0, j = 0, stable = 1;
 
