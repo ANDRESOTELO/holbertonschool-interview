@@ -15,15 +15,15 @@ def print_stats(file_size, codes):
 def stdin_data():
     """Get data form standard input"""
     codes = {
-		"200": 0,
-		"301": 0,
-		"400": 0,
-		"401": 0,
-		"403": 0,
-		"404": 0,
-		"405": 0,
-		"500": 0
-	}
+        "200": 0,
+        "301": 0,
+        "400": 0,
+        "401": 0,
+        "403": 0,
+        "404": 0,
+        "405": 0,
+        "500": 0
+    }
     file_size = 0
     line_count = 0
     try:
