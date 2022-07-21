@@ -7,7 +7,7 @@ program that solves the N queens problem.
 import sys
 
 
-class NQueens:
+class NQueen:
     """ Class for solving N Queen Problem """
 
     def __init__(self, n):
@@ -72,7 +72,7 @@ if N < 4:
     print("N must be at least 4")
     sys.exit(1)
 
-queen = NQueens(N)
+queen = NQueen(N)
 res = queen.nQueen(1)
 
 for i in res:
