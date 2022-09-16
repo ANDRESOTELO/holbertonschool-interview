@@ -1,5 +1,5 @@
-#include <stdlib.h>
 #include "binary_trees.h"
+#include <stdlib.h>
 
 /**
  * tree_height - Height of a binary tree
