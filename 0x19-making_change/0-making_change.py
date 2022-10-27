@@ -1,13 +1,9 @@
 #!/usr/bin/python3
-"""
-Make change script
-"""
+"""Make change script"""
 
 
 def makeChange(coins, total):
-    """
-	Make change function
-	"""
+    """Make change function"""
     change = 0
     sw = True
     if(total <= 0):
