@@ -7,7 +7,7 @@ def makeChange(coins, total):
     change = 0
     sw = True
 
-    if(total <= 0):
+    if (total <= 0):
         return 0
     else:
         while sw is True:
