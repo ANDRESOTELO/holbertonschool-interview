@@ -6,6 +6,7 @@ def makeChange(coins, total):
     """Make change function"""
     change = 0
     sw = True
+
     if(total <= 0):
         return 0
     else:
